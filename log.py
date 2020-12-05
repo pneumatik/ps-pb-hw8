@@ -73,49 +73,7 @@ for log_record in records:
 # Выводим итоговый список log_list
 #print(item_cost)
 
-
-# for i in range(len(log_list)):
-#     if int(log_list[i]['item_cost']) < 13000:
-       
-#         print(f"{log_list[i]['item']} {log_list[i]['item_cost']}")
-
-
+# Выводим список продукции дешевле чем 13000
 for item_cost in log_list:
     if int(item_cost['item_cost']) < 13000:
         print(f"{item_cost['item']} {item_cost['item_cost']}")
-
-cost_items = []
-
-for record in log_list:
-
-    for item in record['item_cost']:
-        item_name = str(item['item'])
-        found = False
-
-        for cost in cost_items:
-            if cost['item'] == item_name:
-                cost['item_cost'] += 1
-                found = True
-                break
-
-    
-
-
-
-
-
-
-
-
-        
- 
-        
-        
-
-        
-    
-    
-    
-        
-           
-        
